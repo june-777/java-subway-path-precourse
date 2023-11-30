@@ -1,4 +1,4 @@
-package subway.controller;
+package subway.controller.handler;
 
 import java.util.function.Supplier;
 
