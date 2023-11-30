@@ -2,7 +2,7 @@ package subway;
 
 import java.util.Scanner;
 import subway.configuration.ApplicationConfiguration;
-import subway.controller.Controller;
+import subway.controller.FrontController;
 import subway.controller.InitController;
 
 public class Application {
@@ -11,9 +11,9 @@ public class Application {
         InitController initController = new InitController();
         initController.process();
 
-        ApplicationConfiguration applicationConfiguration = new ApplicationConfiguration();
-        Controller controller = applicationConfiguration.controller(scanner);
+        ApplicationConfiguration applicationConfiguration = new ApplicationConfiguration(scanner);
+        FrontController frontController = applicationConfiguration.controller();
 
-        controller.process();
+        frontController.process();
     }
 }
