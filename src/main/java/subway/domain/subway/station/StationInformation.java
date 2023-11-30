@@ -1,4 +1,4 @@
-package subway.domain.constant;
+package subway.domain.subway.station;
 
 public enum StationInformation {
     GYODAE("교대역"),
