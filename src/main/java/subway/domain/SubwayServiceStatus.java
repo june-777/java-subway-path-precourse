@@ -1,4 +1,4 @@
-package subway.controller.constants;
+package subway.domain;
 
 import java.util.Arrays;
 
@@ -19,5 +19,5 @@ public enum SubwayServiceStatus {
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("잘못된 커맨드 입니다."));
     }
-    
+
 }

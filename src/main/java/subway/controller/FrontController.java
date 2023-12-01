@@ -20,10 +20,20 @@ public class FrontController {
                 if (applicationStatus == ApplicationStatus.QUIT) {
                     break;
                 }
-
-                controller.process();
+                startSubway();
             } catch (IllegalArgumentException e) {
                 System.out.println("[ERROR] " + e.getMessage());
+            }
+        }
+    }
+
+    public void startSubway() {
+        while (true) {
+            try {
+                controller.process();
+                break;
+            } catch (IllegalArgumentException e) {
+                System.out.println("ERROR] " + e.getMessage());
             }
         }
     }
