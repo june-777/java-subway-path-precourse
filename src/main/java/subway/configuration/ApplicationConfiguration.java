@@ -2,6 +2,7 @@ package subway.configuration;
 
 import java.util.Scanner;
 import subway.controller.Controller;
+import subway.controller.FrontController;
 import subway.service.SubwayService;
 import subway.view.InputView;
 
@@ -15,7 +16,11 @@ public class ApplicationConfiguration {
         this.inputView = inputView();
     }
 
-    public Controller controller() {
+    public FrontController frontController() {
+        return new FrontController(inputView, controller());
+    }
+
+    private Controller controller() {
         return new Controller(inputView, subwayService());
     }
 
